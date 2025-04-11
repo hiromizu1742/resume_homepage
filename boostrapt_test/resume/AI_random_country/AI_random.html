@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Random Country Picker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f0f0f0;
+      padding-top: 100px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    #result {
+      font-size: 2rem;
+      margin: 20px 0;
+      color: #007bff;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <a href="../resume.html" id="top"> MY resume</a>
+
+  <h1>Random Country Picker</h1>
+  <div id="result">Click the button!</div>
+  <button onclick="pickCountry()">Pick a Country</button>
+
+  <script>
+    const countries = [
+      "Japan", "USA", "Brazil", "Germany", "India",
+      "France", "Canada", "Australia", "South Korea", "Italy"
+    ];
+
+    function pickCountry() {
+      const randomIndex = Math.floor(Math.random() * countries.length);
+      document.getElementById('result').innerText = countries[randomIndex];
+    }
+  </script>
+</body>
+</html>
